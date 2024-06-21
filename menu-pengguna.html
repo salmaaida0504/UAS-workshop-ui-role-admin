@@ -22,6 +22,10 @@
       type="text/css"
     />
     <link href="css/ruang-admin.min.css" rel="stylesheet" />
+    <link
+      href="vendor/datatables/dataTables.bootstrap4.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body id="page-top">
@@ -136,7 +140,7 @@
         <li class="nav-item">
           <a
             class="nav-link collapsed"
-            href="menu-transaksi.html"
+            href="#"
             data-toggle="collapse"
             data-target="#collapseTransaksi"
             aria-expanded="true"
@@ -431,7 +435,24 @@
                       </div>
                     </div>
                   </a>
-
+                  <a class="dropdown-item align-items-center" href="#">
+                    <div class="mb-3">
+                      <div class="small text-gray-500">
+                        Create Pie Chart
+                        <div class="small float-right"><b>75%</b></div>
+                      </div>
+                      <div class="progress" style="height: 12px">
+                        <div
+                          class="progress-bar bg-danger"
+                          role="progressbar"
+                          style="width: 75%"
+                          aria-valuenow="75"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                    </div>
+                  </a>
                   <a
                     class="dropdown-item text-center small text-gray-500"
                     href="#"
@@ -492,292 +513,195 @@
             </ul>
           </nav>
           <!-- Topbar -->
-
           <!-- Container Fluid-->
           <div class="container-fluid" id="container-wrapper">
             <div
               class="d-sm-flex align-items-center justify-content-between mb-4"
             >
-              <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+              <h1 class="h3 mb-0 text-gray-800">Data User</h1>
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="./">Home</a></li>
+                <li class="breadcrumb-item">Tables</li>
                 <li class="breadcrumb-item active" aria-current="page">
-                  Dashboard
+                  Data User
                 </li>
               </ol>
             </div>
 
-            <div class="row mb-3">
-              <!-- Earnings (Monthly) Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card h-100">
-                  <div class="card-body">
-                    <div class="row align-items-center">
-                      <div class="col mr-2">
-                        <div
-                          class="text-xs font-weight-bold text-uppercase mb-1"
-                        >
-                          Pendapatan
-                        </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          $812,77
-                        </div>
-                        <div class="mt-2 mb-0 text-muted text-xs">
-                          <span class="text-success mr-2"
-                            ><i class="fa fa-arrow-up"></i> 5.2%</span
-                          >
-                          <span>Sejak bulan lalu</span>
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fas fa-calendar fa-2x text-primary"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Earnings (Annual) Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card h-100">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div
-                          class="text-xs font-weight-bold text-uppercase mb-1"
-                        >
-                          Hasil Kelola
-                        </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          850 Kg
-                        </div>
-                        <div class="mt-2 mb-0 text-muted text-xs">
-                          <span class="text-success mr-2"
-                            ><i class="fas fa-arrow-up"></i> 10%</span
-                          >
-                          <span>Sejak tahun lalu</span>
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fas fa-shopping-cart fa-2x text-success"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- New User Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card h-100">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div
-                          class="text-xs font-weight-bold text-uppercase mb-1"
-                        >
-                          Pengguna Baru
-                        </div>
-                        <div
-                          class="h5 mb-0 mr-3 font-weight-bold text-gray-800"
-                        >
-                          120
-                        </div>
-                        <div class="mt-2 mb-0 text-muted text-xs">
-                          <span class="text-success mr-2"
-                            ><i class="fas fa-arrow-up"></i> 15%</span
-                          >
-                          <span>Sejak bulan lalu</span>
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fas fa-users fa-2x text-info"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Pending Requests Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card h-100">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div
-                          class="text-xs font-weight-bold text-uppercase mb-1"
-                        >
-                          Proses menunggu
-                        </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          22
-                        </div>
-                        <div class="mt-2 mb-0 text-muted text-xs">
-                          <span class="text-danger mr-2"
-                            ><i class="fas fa-arrow-down"></i> 8%</span
-                          >
-                          <span>Sejak kemarin</span>
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fas fa-comments fa-2x text-warning"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <!-- Row -->
+            <div class="row">
+              <!-- DataTable with Hover -->
+              <div class="col-lg-12">
+                <div class="card mb-4">
+                  <div
+                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+                  ></div>
+                  <div class="table-responsive p-3">
+                    <table
+                      class="table align-items-center table-flush table-hover"
+                      id="dataTableHover"
+                    >
+                      <thead class="thead-light">
+                        <tr>
+                          <th>Nama</th>
+                          <th>Email</th>
+                          <th>Password</th>
+                        </tr>
+                      </thead>
 
-              <!-- Area Chart -->
-              <div class="col-xl-8 col-lg-7">
-                <div class="card mb-4">
-                  <div
-                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
-                  >
-                    <h6 class="m-0 font-weight-bold text-primary">
-                      Monthly Recap Report
-                    </h6>
-                    <div class="dropdown no-arrow">
-                      <a
-                        class="dropdown-toggle"
-                        href="#"
-                        role="button"
-                        id="dropdownMenuLink"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        <i
-                          class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"
-                        ></i>
-                      </a>
-                      <div
-                        class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                        aria-labelledby="dropdownMenuLink"
-                      >
-                        <div class="dropdown-header">Dropdown Header:</div>
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"
-                          >Something else here</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <div class="chart-area">
-                      <canvas id="myAreaChart"></canvas>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Pie Chart -->
-              <div class="col-xl-4 col-lg-5">
-                <div class="card mb-4">
-                  <div
-                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
-                  >
-                    <h6 class="m-0 font-weight-bold text-primary">
-                      Rekap Layanan
-                    </h6>
-                    <div class="dropdown no-arrow">
-                      <a
-                        class="dropdown-toggle btn btn-primary btn-sm"
-                        href="#"
-                        role="button"
-                        id="dropdownMenuLink"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        Month <i class="fas fa-chevron-down"></i>
-                      </a>
-                      <div
-                        class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                        aria-labelledby="dropdownMenuLink"
-                      >
-                        <div class="dropdown-header">Select Periode</div>
-                        <a class="dropdown-item" href="#">Today</a>
-                        <a class="dropdown-item" href="#">Week</a>
-                        <a class="dropdown-item active" href="#">Month</a>
-                        <a class="dropdown-item" href="#">This Year</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <div class="mb-3">
-                      <div class="small text-gray-500">
-                        Pick Up and Sorting
-                        <div class="small float-right">
-                          <b>600 of 800 Items</b>
-                        </div>
-                      </div>
-                      <div class="progress" style="height: 12px">
-                        <div
-                          class="progress-bar bg-warning"
-                          role="progressbar"
-                          style="width: 80%"
-                          aria-valuenow="80"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
-                      </div>
-                    </div>
-                    <div class="mb-3">
-                      <div class="small text-gray-500">
-                        Bisnis dan Event
-                        <div class="small float-right">
-                          <b>500 of 800 Items</b>
-                        </div>
-                      </div>
-                      <div class="progress" style="height: 12px">
-                        <div
-                          class="progress-bar bg-success"
-                          role="progressbar"
-                          style="width: 70%"
-                          aria-valuenow="70"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
-                      </div>
-                    </div>
-                    <div class="mb-3">
-                      <div class="small text-gray-500">
-                        Pusat Daur Ulang
-                        <div class="small float-right">
-                          <b>455 of 800 Items</b>
-                        </div>
-                      </div>
-                      <div class="progress" style="height: 12px">
-                        <div
-                          class="progress-bar bg-danger"
-                          role="progressbar"
-                          style="width: 55%"
-                          aria-valuenow="55"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
-                      </div>
-                    </div>
-                    <div class="mb-3">
-                      <div class="small text-gray-500">
-                        Edukasi dan Pelatihan
-                        <div class="small float-right">
-                          <b>400 of 800 Items</b>
-                        </div>
-                      </div>
-                      <div class="progress" style="height: 12px">
-                        <div
-                          class="progress-bar bg-info"
-                          role="progressbar"
-                          style="width: 50%"
-                          aria-valuenow="50"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-footer text-center">
-                    <a class="m-0 small text-primary card-link" href="#"
-                      >View More <i class="fas fa-chevron-right"></i
-                    ></a>
+                      <tbody>
+                        <tr>
+                          <td>John Doe</td>
+                          <td>johndoe@example.com</td>
+                          <td>password123</td>
+                        </tr>
+                        <tr>
+                          <td>Jane Smith</td>
+                          <td>janesmith@example.com</td>
+                          <td>mysecretpassword</td>
+                        </tr>
+                        <tr>
+                          <td>Michael Johnson</td>
+                          <td>michaelj@example.com</td>
+                          <td>mikepass2024</td>
+                        </tr>
+                        <tr>
+                          <td>Emily Brown</td>
+                          <td>emilyb@example.com</td>
+                          <td>password@2023</td>
+                        </tr>
+                        <tr>
+                          <td>Chris Evans</td>
+                          <td>chrisevans@example.com</td>
+                          <td>evans@321</td>
+                        </tr>
+                        <tr>
+                          <td>Linda White</td>
+                          <td>lindaw@example.com</td>
+                          <td>lindapass!</td>
+                        </tr>
+                        <tr>
+                          <td>Kevin Martin</td>
+                          <td>kevinmartin@example.com</td>
+                          <td>kevin@2023</td>
+                        </tr>
+                        <tr>
+                          <td>Sarah Wilson</td>
+                          <td>sarahwilson@example.com</td>
+                          <td>sarah#456</td>
+                        </tr>
+                        <tr>
+                          <td>David Lee</td>
+                          <td>davidlee@example.com</td>
+                          <td>davidsafe</td>
+                        </tr>
+                        <tr>
+                          <td>Jessica Garcia</td>
+                          <td>jessicagarcia@example.com</td>
+                          <td>jessica_secure</td>
+                        </tr>
+                        <tr>
+                          <td>Tom Harris</td>
+                          <td>tomharris@example.com</td>
+                          <td>tompass@2024</td>
+                        </tr>
+                        <tr>
+                          <td>Olivia Clark</td>
+                          <td>oliviaclark@example.com</td>
+                          <td>olivia@secure</td>
+                        </tr>
+                        <tr>
+                          <td>Daniel Lewis</td>
+                          <td>daniellewis@example.com</td>
+                          <td>daniel_password</td>
+                        </tr>
+                        <tr>
+                          <td>Emma Walker</td>
+                          <td>emmawalker@example.com</td>
+                          <td>emma!walker</td>
+                        </tr>
+                        <tr>
+                          <td>Robert Hall</td>
+                          <td>roberthall@example.com</td>
+                          <td>robert1234</td>
+                        </tr>
+                        <tr>
+                          <td>Mia Young</td>
+                          <td>miayoung@example.com</td>
+                          <td>mia_young2023</td>
+                        </tr>
+                        <tr>
+                          <td>George Allen</td>
+                          <td>georgeallen@example.com</td>
+                          <td>george@2023</td>
+                        </tr>
+                        <tr>
+                          <td>Sophia King</td>
+                          <td>sophiaking@example.com</td>
+                          <td>sophia_king</td>
+                        </tr>
+                        <tr>
+                          <td>Matthew Scott</td>
+                          <td>matthewscott@example.com</td>
+                          <td>matthew#2024</td>
+                        </tr>
+                        <tr>
+                          <td>Ava Adams</td>
+                          <td>avaadams@example.com</td>
+                          <td>ava@adams</td>
+                        </tr>
+                        <tr>
+                          <td>William Thomas</td>
+                          <td>williamthomas@example.com</td>
+                          <td>william!thomas</td>
+                        </tr>
+                        <tr>
+                          <td>Isabella Baker</td>
+                          <td>isabellabaker@example.com</td>
+                          <td>isabella_baker2023</td>
+                        </tr>
+                        <tr>
+                          <td>James Turner</td>
+                          <td>jamesturner@example.com</td>
+                          <td>james@turner</td>
+                        </tr>
+                        <tr>
+                          <td>Grace Miller</td>
+                          <td>gracemiller@example.com</td>
+                          <td>grace#secure</td>
+                        </tr>
+                        <tr>
+                          <td>Henry Nelson</td>
+                          <td>henrynelson@example.com</td>
+                          <td>henry_nelson</td>
+                        </tr>
+                        <tr>
+                          <td>Victoria Hill</td>
+                          <td>victoriahill@example.com</td>
+                          <td>victoria@hill</td>
+                        </tr>
+                        <tr>
+                          <td>Edward Moore</td>
+                          <td>edwardmoore@example.com</td>
+                          <td>edward_moore123</td>
+                        </tr>
+                        <tr>
+                          <td>Charlotte Lee</td>
+                          <td>charlottelee@example.com</td>
+                          <td>charlotte@lee</td>
+                        </tr>
+                        <tr>
+                          <td>Brian Brown</td>
+                          <td>brianbrown@example.com</td>
+                          <td>brian@brown</td>
+                        </tr>
+                        <tr>
+                          <td>Amelia Davis</td>
+                          <td>ameliadavis@example.com</td>
+                          <td>amelia!davis</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
@@ -827,6 +751,7 @@
           </div>
           <!---Container Fluid-->
         </div>
+
         <!-- Footer -->
         <footer class="sticky-footer bg-white">
           <div class="container my-auto">
@@ -846,7 +771,16 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="js/ruang-admin.min.js"></script>
-    <script src="vendor/chart.js/Chart.min.js"></script>
-    <script src="js/demo/chart-area-demo.js"></script>
+    <!-- Page level plugins -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script>
+      $(document).ready(function () {
+        $("#dataTable").DataTable(); // ID From dataTable
+        $("#dataTableHover").DataTable(); // ID From dataTable with Hover
+      });
+    </script>
   </body>
 </html>

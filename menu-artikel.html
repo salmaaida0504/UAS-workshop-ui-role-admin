@@ -22,6 +22,10 @@
       type="text/css"
     />
     <link href="css/ruang-admin.min.css" rel="stylesheet" />
+    <link
+      href="vendor/datatables/dataTables.bootstrap4.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body id="page-top">
@@ -136,7 +140,7 @@
         <li class="nav-item">
           <a
             class="nav-link collapsed"
-            href="menu-transaksi.html"
+            href="#"
             data-toggle="collapse"
             data-target="#collapseTransaksi"
             aria-expanded="true"
@@ -431,7 +435,24 @@
                       </div>
                     </div>
                   </a>
-
+                  <a class="dropdown-item align-items-center" href="#">
+                    <div class="mb-3">
+                      <div class="small text-gray-500">
+                        Create Pie Chart
+                        <div class="small float-right"><b>75%</b></div>
+                      </div>
+                      <div class="progress" style="height: 12px">
+                        <div
+                          class="progress-bar bg-danger"
+                          role="progressbar"
+                          style="width: 75%"
+                          aria-valuenow="75"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                    </div>
+                  </a>
                   <a
                     class="dropdown-item text-center small text-gray-500"
                     href="#"
@@ -492,341 +513,64 @@
             </ul>
           </nav>
           <!-- Topbar -->
-
           <!-- Container Fluid-->
           <div class="container-fluid" id="container-wrapper">
-            <div
-              class="d-sm-flex align-items-center justify-content-between mb-4"
-            >
-              <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+              <h1 class="h3 mb-0 text-gray-800">Data Mitra</h1>
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="./">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  Dashboard
-                </li>
+                <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Data Mitra</li>
               </ol>
             </div>
 
-            <div class="row mb-3">
-              <!-- Earnings (Monthly) Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card h-100">
-                  <div class="card-body">
-                    <div class="row align-items-center">
-                      <div class="col mr-2">
-                        <div
-                          class="text-xs font-weight-bold text-uppercase mb-1"
-                        >
-                          Pendapatan
-                        </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          $812,77
-                        </div>
-                        <div class="mt-2 mb-0 text-muted text-xs">
-                          <span class="text-success mr-2"
-                            ><i class="fa fa-arrow-up"></i> 5.2%</span
-                          >
-                          <span>Sejak bulan lalu</span>
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fas fa-calendar fa-2x text-primary"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Earnings (Annual) Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card h-100">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div
-                          class="text-xs font-weight-bold text-uppercase mb-1"
-                        >
-                          Hasil Kelola
-                        </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          850 Kg
-                        </div>
-                        <div class="mt-2 mb-0 text-muted text-xs">
-                          <span class="text-success mr-2"
-                            ><i class="fas fa-arrow-up"></i> 10%</span
-                          >
-                          <span>Sejak tahun lalu</span>
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fas fa-shopping-cart fa-2x text-success"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- New User Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card h-100">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div
-                          class="text-xs font-weight-bold text-uppercase mb-1"
-                        >
-                          Pengguna Baru
-                        </div>
-                        <div
-                          class="h5 mb-0 mr-3 font-weight-bold text-gray-800"
-                        >
-                          120
-                        </div>
-                        <div class="mt-2 mb-0 text-muted text-xs">
-                          <span class="text-success mr-2"
-                            ><i class="fas fa-arrow-up"></i> 15%</span
-                          >
-                          <span>Sejak bulan lalu</span>
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fas fa-users fa-2x text-info"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Pending Requests Card Example -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card h-100">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div
-                          class="text-xs font-weight-bold text-uppercase mb-1"
-                        >
-                          Proses menunggu
-                        </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          22
-                        </div>
-                        <div class="mt-2 mb-0 text-muted text-xs">
-                          <span class="text-danger mr-2"
-                            ><i class="fas fa-arrow-down"></i> 8%</span
-                          >
-                          <span>Sejak kemarin</span>
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fas fa-comments fa-2x text-warning"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Area Chart -->
-              <div class="col-xl-8 col-lg-7">
+            <div class="row">
+              <div class="col-lg-12">
+                <!-- DataTables -->
                 <div class="card mb-4">
-                  <div
-                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
-                  >
-                    <h6 class="m-0 font-weight-bold text-primary">
-                      Monthly Recap Report
-                    </h6>
-                    <div class="dropdown no-arrow">
-                      <a
-                        class="dropdown-toggle"
-                        href="#"
-                        role="button"
-                        id="dropdownMenuLink"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        <i
-                          class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"
-                        ></i>
-                      </a>
-                      <div
-                        class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                        aria-labelledby="dropdownMenuLink"
-                      >
-                        <div class="dropdown-header">Dropdown Header:</div>
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"
-                          >Something else here</a
-                        >
-                      </div>
-                    </div>
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Tabel Data Mitra</h6>
                   </div>
-                  <div class="card-body">
-                    <div class="chart-area">
-                      <canvas id="myAreaChart"></canvas>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Pie Chart -->
-              <div class="col-xl-4 col-lg-5">
-                <div class="card mb-4">
-                  <div
-                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
-                  >
-                    <h6 class="m-0 font-weight-bold text-primary">
-                      Rekap Layanan
-                    </h6>
-                    <div class="dropdown no-arrow">
-                      <a
-                        class="dropdown-toggle btn btn-primary btn-sm"
-                        href="#"
-                        role="button"
-                        id="dropdownMenuLink"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        Month <i class="fas fa-chevron-down"></i>
-                      </a>
-                      <div
-                        class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                        aria-labelledby="dropdownMenuLink"
-                      >
-                        <div class="dropdown-header">Select Periode</div>
-                        <a class="dropdown-item" href="#">Today</a>
-                        <a class="dropdown-item" href="#">Week</a>
-                        <a class="dropdown-item active" href="#">Month</a>
-                        <a class="dropdown-item" href="#">This Year</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <div class="mb-3">
-                      <div class="small text-gray-500">
-                        Pick Up and Sorting
-                        <div class="small float-right">
-                          <b>600 of 800 Items</b>
-                        </div>
-                      </div>
-                      <div class="progress" style="height: 12px">
-                        <div
-                          class="progress-bar bg-warning"
-                          role="progressbar"
-                          style="width: 80%"
-                          aria-valuenow="80"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
-                      </div>
-                    </div>
-                    <div class="mb-3">
-                      <div class="small text-gray-500">
-                        Bisnis dan Event
-                        <div class="small float-right">
-                          <b>500 of 800 Items</b>
-                        </div>
-                      </div>
-                      <div class="progress" style="height: 12px">
-                        <div
-                          class="progress-bar bg-success"
-                          role="progressbar"
-                          style="width: 70%"
-                          aria-valuenow="70"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
-                      </div>
-                    </div>
-                    <div class="mb-3">
-                      <div class="small text-gray-500">
-                        Pusat Daur Ulang
-                        <div class="small float-right">
-                          <b>455 of 800 Items</b>
-                        </div>
-                      </div>
-                      <div class="progress" style="height: 12px">
-                        <div
-                          class="progress-bar bg-danger"
-                          role="progressbar"
-                          style="width: 55%"
-                          aria-valuenow="55"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
-                      </div>
-                    </div>
-                    <div class="mb-3">
-                      <div class="small text-gray-500">
-                        Edukasi dan Pelatihan
-                        <div class="small float-right">
-                          <b>400 of 800 Items</b>
-                        </div>
-                      </div>
-                      <div class="progress" style="height: 12px">
-                        <div
-                          class="progress-bar bg-info"
-                          role="progressbar"
-                          style="width: 50%"
-                          aria-valuenow="50"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-footer text-center">
-                    <a class="m-0 small text-primary card-link" href="#"
-                      >View More <i class="fas fa-chevron-right"></i
-                    ></a>
+                  <div class="table-responsive p-3">
+                    <table class="table align-items-center table-flush" id="dataTable">
+                      <thead class="thead-light">
+                        <tr>
+                          <th>No</th>
+                          <th>Judul Artikel</th>
+                          <th>Konten</th>
+                          
+                          
+                        </tr>
+                      </thead>
+                      
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Politik Perusakan Lingkungan Picu Polemik</td>
+                          <td>Korupsi dan eksploitasi sumber daya alam menimbulkan kerusakan lingkungan yang amat parah</td>  
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>Kerusakan Lingkungan di Ibu Kota Baru Berpotensi Meluas.</td>
+                          <td>Proyek IKN ditengarai berpotensi merusak lingkungan dan mengabaikan hak masyarakat adat</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>Kampanye Indonesia Bebas Emisi Terus Digalakkan</td>
+                          <td>Sejumlah aktivis dan mahasiswa memanfaatkan hari bebas kendaraan atau Car Free Day (CFD)</td>
+                        </tr>
+                        <!-- Anda dapat menambahkan lebih banyak baris layanan di sini -->
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
             </div>
             <!--Row-->
 
-            <!-- Modal Logout -->
-            <div
-              class="modal fade"
-              id="logoutModal"
-              tabindex="-1"
-              role="dialog"
-              aria-labelledby="exampleModalLabelLogout"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabelLogout">
-                      Ohh No!
-                    </h5>
-                    <button
-                      type="button"
-                      class="close"
-                      data-dismiss="modal"
-                      aria-label="Close"
-                    >
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <p>Are you sure you want to logout?</p>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-outline-primary"
-                      data-dismiss="modal"
-                    >
-                      Cancel
-                    </button>
-                    <a href="login.html" class="btn btn-primary">Logout</a>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
           <!---Container Fluid-->
         </div>
+
         <!-- Footer -->
         <footer class="sticky-footer bg-white">
           <div class="container my-auto">
@@ -846,7 +590,16 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="js/ruang-admin.min.js"></script>
-    <script src="vendor/chart.js/Chart.min.js"></script>
-    <script src="js/demo/chart-area-demo.js"></script>
+    <!-- Page level plugins -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script>
+      $(document).ready(function () {
+        $("#dataTable").DataTable(); // ID From dataTable
+        $("#dataTableHover").DataTable(); // ID From dataTable with Hover
+      });
+    </script>
   </body>
 </html>

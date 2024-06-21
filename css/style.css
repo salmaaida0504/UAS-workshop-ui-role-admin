@@ -1,0 +1,29 @@
+/* Sticky Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vh; /* Sesuaikan dengan lebar sidebar Anda */
+    overflow-y: auto; /* Tambahkan scroll jika sidebar lebih tinggi dari viewport */
+    z-index: 1; /* Pastikan di atas konten lainnya */
+  }
+
+  /* Konten utama harus memiliki margin kiri sesuai dengan lebar sidebar */
+  #content-wrapper {
+    margin-left: 250px; /* Sesuaikan dengan lebar sidebar Anda */
+  }
+
+  /* Sticky Topbar */
+  .topbar {
+    position: fixed;
+    top: 0;
+    width: calc(100% - 250px); /* Sesuaikan dengan lebar sidebar Anda */
+    margin-left: 250px; /* Sesuaikan dengan lebar sidebar Anda */
+    z-index: 1; /* Pastikan di atas konten lainnya */
+  }
+
+  /* Tambahkan padding pada konten untuk menghindari tumpang tindih dengan topbar */
+  #content {
+    padding-top: 56px; /* Sesuaikan dengan tinggi topbar Anda */
+  }
